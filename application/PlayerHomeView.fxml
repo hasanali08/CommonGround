@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="293.0" prefWidth="483.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PlayerHomeViewController">
+   <children>
+      <VBox fx:id="homeViewBox" prefHeight="230.0" prefWidth="483.0" spacing="10">
+          
+          <!-- Player Name or Title -->
+          <Label fx:id="viewBoxTitle" alignment="CENTER" contentDisplay="CENTER" text="Your Recent Match Performance">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+            <padding>
+               <Insets left="100.0" top="50.0" />
+            </padding>
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+         </Label>
+          
+          <!-- Container for Player's Stats -->
+          <HBox fx:id="recentMatchStatsHBox" spacing="20">
+              
+              <!-- Minutes Played Section -->
+              <VBox fx:id="minutesPlayedVBox" spacing="5">
+                  <Label fx:id="minutesPlayedTitle" text="Minutes Played">
+                  <padding>
+                     <Insets left="60.0" />
+                  </padding>
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+                  <HBox fx:id="minutesPlayedHBox" spacing="5">
+                      <Label fx:id="minutesPlayedLabel" text="75 min">
+                     <padding>
+                        <Insets left="60.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  </HBox>
+              </VBox>
+      
+              <!-- Goals Scored Section -->
+              <VBox fx:id="goalsScoredVBox" alignment="CENTER" spacing="5">
+                  <Label text="Goals Scored">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+                  <HBox spacing="5">
+                      <!-- Icon for Goals -->
+                      <ImageView fitHeight="24" fitWidth="24">
+                     <image>
+                        <Image url="@../assets/img/football.png" />
+                     </image>
+                  </ImageView>
+                      <Label fx:id="goalsScoredLabel" text="2">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  </HBox>
+              </VBox>
+      
+              <!-- Assists Made Section -->
+              <VBox fx:id="assistsMadeVBox" alignment="CENTER" spacing="5">
+                  <Label fx:id="assistsTitle" text="Assists Made">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+                  <HBox fx:id="assistsMadeHBox" spacing="5">
+                      <!-- Icon for Assists -->
+                      <ImageView fitHeight="24" fitWidth="31.0">
+                     <image>
+                        <Image url="@../assets/img/cleats.png" />
+                     </image>
+                  </ImageView>
+                      <Label fx:id="assistsMadeLabel" text="1">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  </HBox>
+              </VBox>
+      
+              <!-- Match Rating Section -->
+              <VBox fx:id="matchRatingVBox" alignment="CENTER" spacing="5">
+                  <Label fx:id="matchRatingTitle" text="Match Rating">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+                  <HBox fx:id="matchRatingHBox" spacing="3">
+                      <!-- Star rating to represent match rating -->
+                      <ImageView fx:id="star1" fitHeight="16" fitWidth="16">
+                     <image>
+                        <Image url="@../assets/img/full_star.png" />
+                     </image>
+                  </ImageView>
+                      <ImageView fx:id="star2" fitHeight="16" fitWidth="16">
+                     <image>
+                        <Image url="@../assets/img/full_star.png" />
+                     </image>
+                  </ImageView>
+                      <ImageView fx:id="star3" fitHeight="16" fitWidth="16">
+                     <image>
+                        <Image url="@../assets/img/full_star.png" />
+                     </image>
+                  </ImageView>
+                      <ImageView fx:id="star4" fitHeight="16" fitWidth="16">
+                     <image>
+                        <Image url="@../assets/img/half_star.png" />
+                     </image>
+                  </ImageView>
+                      <ImageView fx:id="star5" fitHeight="16" fitWidth="16">
+<!--                     <image> -->
+<!--                         <Image url="/assets/img/empty_star.png"/> -->
+<!--                     </image> -->
+                </ImageView>
+                  </HBox>
+              </VBox>
+      
+          </HBox>
+         <VBox fx:id="upcomingMatchBox" prefHeight="149.0" prefWidth="483.0" />
+      
+      </VBox>
+   </children>
+</StackPane>

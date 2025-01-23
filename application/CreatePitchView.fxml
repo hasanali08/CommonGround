@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="pitchCreationBox" prefHeight="436.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CreatePitchViewController">
+   <children>
+      <Pane fx:id="pitchInfoPanel" prefHeight="436.0" prefWidth="380.0" style="-fx-background-color: #eee9e7;">
+         <children>
+            <VBox fx:id="pitchInfoBox" prefHeight="436.0" prefWidth="370.0">
+               <children>
+                  <Label fx:id="pitchNameLabel" prefHeight="33.0" prefWidth="106.0" text="Pitch Name">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="40.0" top="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="pitchName" prefHeight="25.0" prefWidth="341.0">
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label fx:id="pitchLocationLabel" prefHeight="33.0" prefWidth="96.0" text="Location">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="40.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="pitchLocation" prefHeight="25.0" prefWidth="341.0">
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label fx:id="pitchTypeLabel" prefHeight="44.0" prefWidth="72.0" text="Type">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="40.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="pitchType" prefHeight="25.0" prefWidth="341.0">
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label fx:id="pitchPriceLabel" prefHeight="33.0" prefWidth="124.0" text="Booking Price">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="40.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="pitchPrice" prefHeight="25.0" prefWidth="341.0">
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button fx:id="add_pitch_image_button" mnemonicParsing="false" prefHeight="38.0" prefWidth="145.0" style="-fx-background-color: #3c791b;" text="Add Pitch Image" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft YaHei UI Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <VBox.margin>
+                        <Insets left="110.0" top="40.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane fx:id="pitchImagePanel" prefHeight="436.0" prefWidth="442.0">
+         <children>
+            <ImageView fx:id="pitchImage" fitHeight="292.0" fitWidth="368.0" layoutX="20.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <Glow />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <Button fx:id="confirm_button" layoutX="149.0" layoutY="349.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="145.0" style="-fx-background-color: #3c791b;" text="Confirm " textFill="WHITE">
+               <font>
+                  <Font name="Microsoft YaHei UI Bold" size="14.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Label fx:id="pitchImageSelectionLabel" layoutX="151.0" layoutY="317.0" text="No pitch image selected">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</HBox>

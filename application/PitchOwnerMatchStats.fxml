@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane prefHeight="393.0" prefWidth="747.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PitchOwnerMatchStatsController">
+   <children>
+      <VBox prefHeight="342.0" prefWidth="760.0" spacing="10.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="33.0" prefWidth="760.0" text="Player Stats" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TableView fx:id="playerStatsTable" prefHeight="226.0" prefWidth="760.0">
+               <columns>
+                  <TableColumn fx:id="playerNameColumn" text="Player Name" />
+                  <TableColumn fx:id="playerTeamColumn" text="Team" /> 
+                  <TableColumn fx:id="goalsColumn" text="Goals" />
+                  <TableColumn fx:id="assistsColumn" text="Assists" />
+                  <TableColumn fx:id="ratingColumn" text="Rating" />
+                  <TableColumn fx:id="minutesColumn" prefWidth="96.0" text="Minutes Played" />
+               </columns>
+            </TableView>
+            <HBox spacing="10.0">
+               <children>
+                  <Label text="Goals:">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="goalsField" />
+                  <Label text="Assists:" />
+                  <TextField fx:id="assistsField">
+                     <HBox.margin>
+                        <Insets left="4.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="addStatsButton" onAction="#addPlayerStats" text="Add Stats" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Rating:">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="ratingField">
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="Minutes:" />
+                  <TextField fx:id="minutesField">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>
